@@ -146,11 +146,11 @@ void MainWindow::sendPacket()
     command->set_wheelsspeed(!chkVel->isChecked());
     command->set_wheel1(edtV1->text().toDouble());
     command->set_wheel2(edtV2->text().toDouble());
-    command->set_wheel3(5);
-    //command->set_wheel3(edtV3->text().toDouble());
+    //command->set_wheel3(5);
+    command->set_wheel3(edtV3->text().toDouble());
     command->set_wheel4(edtV4->text().toDouble());
-    //command->set_veltangent(edtVx->text().toDouble());
-    command->set_veltangent(3)
+    command->set_veltangent(edtVx->text().toDouble());
+    //command->set_veltangent(3)
     command->set_velnormal(edtVy->text().toDouble());
     command->set_velangular(edtW->text().toDouble());
 
