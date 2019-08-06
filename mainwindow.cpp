@@ -21,12 +21,14 @@ MainWindow::MainWindow(QWidget *parent)
     edtChip = new QLineEdit("0", this);
     edtKick = new QLineEdit("0", this);
 
-    this->setWindowTitle(QString("grSim Sample Client - v 2.0"));
+    this->setWindowTitle(QString("grSimmmm Sample Client - v 2.0"));
+    //this->setWindowTitle(QString("grSim Sample Client - v 2.0"));
 
     lblIp = new QLabel("Simulator Address", this);
     lblPort = new QLabel("Simulator Port", this);
     lblId = new QLabel("Id", this);
-    lblVx = new QLabel("Velocity X (m/s)", this);
+    lblVx = new QLabel("Velocity XXX (m/s)", this);
+    //lblVx = new QLabel("Velocity X (m/s)", this);
     lblVy = new QLabel("Velocity Y (m/s)", this);
     lblW  = new QLabel("Velocity W (rad/s)", this);
     lblV1 = new QLabel("Wheel1 (rad/s)", this);
@@ -141,10 +143,12 @@ void MainWindow::sendPacket()
     packet.mutable_commands()->set_isteamyellow(yellow);
     packet.mutable_commands()->set_timestamp(0.0);
     grSim_Robot_Command* command = packet.mutable_commands()->add_robot_commands();
-    command->set_id(edtId->text().toInt());
+    //command->set_id(edtId->text().toInt());
+    command->set_id(3);
 
     command->set_wheelsspeed(!chkVel->isChecked());
-    command->set_wheel1(edtV1->text().toDouble());
+    //command->set_wheel1(edtV1->text().toDouble());
+    command->set_wheel1(10);
     command->set_wheel2(edtV2->text().toDouble());
     //command->set_wheel3(5);
     command->set_wheel3(edtV3->text().toDouble());

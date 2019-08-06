@@ -1,0 +1,5 @@
+class robocommand{
+    public:
+        int bangou;
+        double nenryou;
+};
